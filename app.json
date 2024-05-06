@@ -13,13 +13,15 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.raider.expo51imgly"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.raider.expo51imgly"
     },
     "web": {
       "bundler": "metro",
@@ -27,7 +29,41 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "kotlinVersion": "1.8.10"
+          }
+        }
+      ],
+      [
+        "react-native-imglysdk",
+        {
+          "android": {
+            "version": "10.9.0",
+            "kspVersion": "1.8.10-1.0.9",
+            "modules": [
+              "ui:core",
+              "ui:transform",
+              "ui:text",
+              "ui:sticker",
+              "ui:transform",
+              "ui:video-trim",
+              "ui:video-composition",
+              "ui:giphy-sticker",
+              "assets:font-basic",
+              "assets:sticker-shapes",
+              "assets:sticker-emoticons",
+              "assets:sticker-animated",
+              "backend:sticker-animated",
+              "backend:sticker-smart"
+            ]
+          }
+        }
+      ],
+      "expo-build-properties"
     ],
     "experiments": {
       "typedRoutes": true
