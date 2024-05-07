@@ -43,7 +43,7 @@
         {
           "android": {
             "version": "10.9.0",
-            "kspVersion": "1.8.10-1.0.9"
+            "kspVersion": "1.9.22-1.0.17"
           }
         }
       ],
